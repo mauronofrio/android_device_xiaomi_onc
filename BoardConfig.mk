@@ -41,17 +41,17 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := sdm710
+TARGET_BOOTLOADER_BOARD_NAME := sdm632
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 swiotlb=1 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 androidboot.selinux=permissive
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78af000 firmware_class.path=/vendor/firmware_mnt/image androidboot.usbconfigfs=true loop.max_part=7 androidboot.selinux=permissive
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
-TARGET_PREBUILT_KERNEL := device/xiaomi/grus/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/xiaomi/onc/Image.gz-dtb
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 NEED_KERNEL_MODULE_SYSTEM := true
 TARGET_KERNEL_ARCH := arm64
@@ -59,11 +59,11 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_BOOTIMG_HEADER_VERSION := 1
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET) --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/grus/dtbo.img
+BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/onc/dtbo.img
 
 # Platform
-TARGET_BOARD_PLATFORM := sdm710
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno616
+TARGET_BOARD_PLATFORM := sdm632
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
@@ -84,7 +84,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := grus
+TARGET_OTA_ASSERT_DEVICE := onc
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 

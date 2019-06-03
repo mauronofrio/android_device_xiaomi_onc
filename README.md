@@ -1,7 +1,7 @@
-# android_device_xiaomi_grus
-For building TWRP for Xiaomi Mi 9 SE
+# android_device_xiaomi_onc
+For building TWRP for Xiaomi Redmin 7
 
-TWRP device tree for Xiaomi Mi 9 SE
+TWRP device tree for Xiaomi Redmin 7
 
 ## Features
 
@@ -25,25 +25,25 @@ repo sync
 Then add these projects to .repo/manifest.xml:
 
 ```xml
-<project path="device/xiaomi/grus" name="mauronofrio/android_device_xiaomi_grus" remote="github" revision="android-9.0" />
+<project path="device/xiaomi/onc" name="mauronofrio/android_device_xiaomi_onc" remote="github" revision="android-9.0" />
 ```
 
 Finally execute these:
 
 ```
 . build/envsetup.sh
-lunch omni_grus-eng
+lunch omni_onc-eng
 mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
 ```
 
 To test it:
 
 ```
-fastboot boot out/target/product/grus/recovery.img
+fastboot boot out/target/product/onc/recovery.img
 ```
 ## Contributors
 
-[Here](https://github.com/TeamWin/android_device_xiaomi_grus/graphs/contributors)
+[Here](https://github.com/TeamWin/android_device_xiaomi_onc/graphs/contributors)
 
 ## Other Sources
 

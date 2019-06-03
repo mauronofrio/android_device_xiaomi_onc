@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := grus
+PRODUCT_RELEASE_NAME := onc
 
 $(call inherit-product, build/target/product/embedded.mk)
 
@@ -23,15 +23,15 @@ $(call inherit-product, build/target/product/embedded.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_grus
-PRODUCT_DEVICE := grus
+PRODUCT_NAME := omni_onc
+PRODUCT_DEVICE := onc
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi 9 SE
+PRODUCT_MODEL := Redmi 7
 PRODUCT_MANUFACTURER := Xiaomi
 
-TARGET_VENDOR_PRODUCT_NAME := grus
-TARGET_VENDOR_DEVICE_NAME := grus
+TARGET_VENDOR_PRODUCT_NAME := onc
+TARGET_VENDOR_DEVICE_NAME := onc
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=grus \
-    BUILD_PRODUCT=grus \
-    PRODUCT_NAME=grus
+    TARGET_DEVICE=onc \
+    BUILD_PRODUCT=onc \
+    PRODUCT_NAME=onc
